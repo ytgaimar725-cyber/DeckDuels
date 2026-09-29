@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeckDuels - 1v1 Overload</title>
+    <title>DeckDuels - 3D Overload</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Load Three.js for 3D graphics -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-    <div class="game-container">
+    <div id="canvas-container"></div>
+
+    <div class="hud-overlay">
         <header>
             <h1>DECK DUELS</h1>
-            <p class="subtitle">1v1 Weight Accumulation Duel</p>
+            <p class="subtitle">3D Table Arena</p>
         </header>
 
         <div class="dashboard">
             <div class="timer-box">
-                <span id="timer-label">Time Left:</span>
                 <span id="time-display">60s</span>
             </div>
             <div class="status-box">
-                <span id="status-text">Dump your weight before time runs out!</span>
+                <span id="status-text">Table active. Play your hand or get overloaded!</span>
             </div>
         </div>
 
         <div class="scale-section">
             <div class="scale-labels">
                 <span>Safe Zone</span>
-                <span id="weight-value">Weight: 50 / 100</span>
+                <span id="weight-value">Table Weight: 50 / 100</span>
                 <span>Overload</span>
             </div>
             <div class="progress-container">
