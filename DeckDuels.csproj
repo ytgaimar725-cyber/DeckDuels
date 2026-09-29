@@ -2,10 +2,51 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>DeckDuels</RootNamespace>
+    <AssemblyName>DeckDuels</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>disable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ApplicationIcon />
+    <Version>1.0.0</Version>
+    <Company>DeckDuels Studios</Company>
+    <Product>DeckDuels</Product>
+    <Description>3D First-Person Competitive Card Game</Description>
+    <Copyright>Copyright (c) 2024 DeckDuels Studios</Copyright>
+    <PackageProjectUrl>https://github.com/yourrepo/DeckDuels</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/yourrepo/DeckDuels</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <SelfContained>false</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenTK" Version="4.8.1" />
+    <PackageReference Include="OpenTK.GLWpfControl" Version="4.2.2" />
+    <PackageReference Include="System.Text.Json" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>
