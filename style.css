@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0b10;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    background-color: #14141f;
+    border: 2px solid #00f0ff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 450px;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+    text-align: center;
+}
+
+header h1 {
+    color: #00f0ff;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #ff8800;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    background: #0b0b10;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #2a2a3d;
+}
+
+#time-display {
+    color: #00f0ff;
+    font-weight: bold;
+}
+
+#status-text {
+    font-size: 0.85rem;
+    color: #a0a0c0;
+}
+
+.scale-section {
+    margin-bottom: 30px;
+}
+
+.scale-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #8888a5;
+    margin-bottom: 8px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #0b0b10;
+    border-radius: 6px;
+    height: 24px;
+    border: 1px solid #2a2a3d;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(90deg, #00f0ff, #ff8800);
+    transition: width 0.3s ease;
+}
+
+.card-action-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.neon-btn {
+    background-color: transparent;
+    color: #00f0ff;
+    border: 2px solid #00f0ff;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
+}
+
+.neon-btn:hover {
+    background-color: #00f0ff;
+    color: #0b0b10;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+}
+
+.neon-btn.secondary {
+    border-color: #ff8800;
+    color: #ff8800;
+}
+
+.neon-btn.secondary:hover {
+    background-color: #ff8800;
+    color: #0b0b10;
+    box-shadow: 0 0 15px rgba(255, 136, 0, 0.5);
+}
+
+.neon-btn:disabled {
+    border-color: #333344;
+    color: #555566;
+    background-color: transparent;
+    cursor: not-allowed;
+    box-shadow: none;
+}
