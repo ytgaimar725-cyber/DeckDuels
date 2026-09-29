@@ -5,77 +5,93 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    background-color: #0b0b10;
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #050508;
     color: #e0e0e0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-.game-container {
-    background-color: #14141f;
+#canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hud-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background-color: rgba(20, 20, 31, 0.85);
+    backdrop-filter: blur(10px);
     border: 2px solid #00f0ff;
     border-radius: 12px;
-    padding: 30px;
-    width: 450px;
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+    padding: 20px 30px;
+    width: 460px;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.25);
     text-align: center;
 }
 
 header h1 {
     color: #00f0ff;
-    font-size: 2rem;
+    font-size: 1.6rem;
     letter-spacing: 2px;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .subtitle {
     color: #ff8800;
-    font-size: 0.9rem;
-    margin-bottom: 25px;
+    font-size: 0.75rem;
+    margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 .dashboard {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    align-items: center;
+    margin-bottom: 15px;
     background: #0b0b10;
-    padding: 12px;
-    border-radius: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
     border: 1px solid #2a2a3d;
 }
 
 #time-display {
     color: #00f0ff;
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
 #status-text {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #a0a0c0;
 }
 
 .scale-section {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .scale-labels {
     display: flex;
     justify-content: space-between;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #8888a5;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .progress-container {
     width: 100%;
     background-color: #0b0b10;
-    border-radius: 6px;
-    height: 24px;
+    border-radius: 4px;
+    height: 18px;
     border: 1px solid #2a2a3d;
     overflow: hidden;
 }
@@ -90,16 +106,16 @@ header h1 {
 .card-action-area {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
 }
 
 .neon-btn {
     background-color: transparent;
     color: #00f0ff;
     border: 2px solid #00f0ff;
-    padding: 12px;
+    padding: 10px;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s ease;
