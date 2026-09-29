@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeckDuels - 1v1 Overload</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>DECK DUELS</h1>
+            <p class="subtitle">1v1 Weight Accumulation Duel</p>
+        </header>
+
+        <div class="dashboard">
+            <div class="timer-box">
+                <span id="timer-label">Time Left:</span>
+                <span id="time-display">60s</span>
+            </div>
+            <div class="status-box">
+                <span id="status-text">Dump your weight before time runs out!</span>
+            </div>
+        </div>
+
+        <div class="scale-section">
+            <div class="scale-labels">
+                <span>Safe Zone</span>
+                <span id="weight-value">Weight: 50 / 100</span>
+                <span>Overload</span>
+            </div>
+            <div class="progress-container">
+                <div id="scale-bar" class="progress-fill"></div>
+            </div>
+        </div>
+
+        <div class="card-action-area">
+            <button id="btn-play-card" class="neon-btn">Play Card (+10 Weight)</button>
+            <button id="btn-restart" class="neon-btn secondary" style="display:none;">Restart Match</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
